@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Large deformation modelling in geomechanics</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+
+    <!-- Script for Video play back on Slide for multiple videos-->
+    <script
+      src = "js/video.js">
+    </script>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Section -->
+            <section>
+              <section>
+                <h2>Modelling transient dynamics of granular slopes</h2>
+                <h3>MPM and DEM</h3>
+                <p>
+                  <br/>Krishna Kumar, <a href="mailto:kks32@cam.ac.uk">kks32@cam.ac.uk</a>
+                  <br/>University of Cambridge.
+		  <br/>
+                  <br/>Kenichi Soga, Jean-Yves Delenne and Farhang Radjai
+                </p>
+                <br/>
+                <div style="float: left; width: 100%;">
+                  <span style="float: left; width: 33%; text-align: center;">
+                    <img style="border:0;" src="images/themes/cued.png" width="100%">
+                  </span>
+                  <span style="float: left; width: 33%; text-align: center;">
+                    <img style="border:0;" src="images/themes/cb-geo-text-white.png" width="100%">
+                  </span>
+                  <span style="float: right; width: 33%; text-align: center;">
+                    <img style="border:0;" src="images/themes/berkeley.png" width="100%">
+                  </span>
+                </div>
+                <br/><br/>
+                <h4>Indian Institute of Technology Madras<br/>December 2016.</h4>
+              </section>
+            </section>
+
+            <!-- Aerial landslides -->
+            <section>
+              <section>
+                <h2>Global landslide hazard</h2>
+                <figure>
+                  <img style="border:0;" src="images/landslide-deaths.png" width="100%">
+                  <figcaption>
+                    Fatalities due to landslides, 2007 - 2013 (Source: Nasa, 2015).
+                  </figcaption>
+                </figure> 
+              </section>
+
+              <section>
+                <h2>Aerial landslides</h2>
+	        <img src="images/afghan_landslide.jpg" width="80%">
+                <figcaption>
+                Afghanistan landslide - 2014 (Source: Boston Globe, 2014).
+                </figcaption>	  
+              </section>
+
+              <section>
+                <h2>Granular column collapse</h2>
+	        <img src="images/column_collapse.png" width="80%">
+              </section>
+
+              <section>
+                <h2>Experimental results (Lube et al 2005)</h2>
+	        <img src="images/runout_column_collapse.png" width="70%">
+              </section>
+            </section>
+
+
+            <!-- Multiscale approach -->
+            <section>
+              <section>
+                <h2>Multiscale modelling in geomechanics</h2>
+	        <figure>
+	          <img src="images/multiscale.png" width="100%">
+	        </figure>                  
+              </section>
+
+              <!-- Multiscale approach -->
+              <section>
+                <h2>Mesh-based vs Mesh-free techniques</h2>
+	        <figure>
+	          <img src="images/continuum_approaches.png" width="100%">
+	        </figure>                  
+              </section>
+              
+              <!-- Material Point Method -->
+              <section>
+                <h2>Material Point Method</h2>
+                <figure>
+	          <img src="images/mpm_equation.png" width="20%">
+	        </figure>         
+                <figure>
+	          <img src="images/mpm_algo.png" width="100%">
+	        </figure>
+              </section>
+
+
+              <!-- Material Point Method -->
+              <section>
+                <h2>MPM v DEM column collapse</h2>
+                <div style="float: left; width: 50%;">
+	          <figure>
+	            <img src="images/a04f.png" width="100%">
+                    <figcaption>
+                      a = 0.4
+                    </figcaption>
+	          </figure>                  
+                </div>
+                <div style="float: right; width: 50%;">
+	          <figure>
+	            <img src="images/a6f.png" width="100%">
+                    <figcaption>
+                      a = 6
+                    </figcaption>
+	          </figure>
+                </div>
+              </section>
+              
+
+              <!-- DEM -->
+              <section>
+                <h2>DEM column collapse</h2>
+                <video  width="80%" controls loop>
+                  <source src="media/a6_dem.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+              </section>
+
+              <!-- MPM v DEM runout -->
+              <section>
+                <h2>Column collapse runout</h2>
+	        <figure>
+	          <img src="images/mpm_colum_runout.png" width="80%">
+                  <figcaption>
+                    Run-out v aspect ratio
+                  </figcaption>
+	        </figure>                  
+              </section>
+
+              
+              <!-- MPM slope -->
+              <section>
+                <h2>Granular slope subjected to impact</h2>
+                <h3>MPM simulation</h3>
+                <video  width="100%" controls loop>
+                  <source src="media/mpm_100j.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+              </section>
+              
+             <!-- MPM v DEM runout -->
+              <section>
+                <h2>Granular collapse v slope subjected to impact</h2>
+	        <figure>
+	          <img src="images/mpm_slope_column.png" width="90%">
+	        </figure>                  
+              </section>
+            </section>
+
+            <!-- Summary -->
+            <section>
+              <!-- Thank you! -->
+              <section>
+                <h1> Thank you!! </h1>
+                <p>
+                  <br/> Krishna Kumar, <a href="mailto:kks32@cam.ac.uk">kks32@cam.ac.uk</a>
+                </p>
+                <br/>
+                <br/><br/>
+
+                <div style="float: left; width: 100%;">
+                  <span style="float: left; width: 33%; text-align: center;">
+                    <img style="border:0;" src="images/themes/cued.png" width="100%">
+                  </span>
+                  <span style="float: left; width: 33%; text-align: center;">
+                    <img style="border:0;" src="images/themes/cb-geo-text-white.png" width="100%">
+                  </span>
+                  <span style="float: right; width: 33%; text-align: center;">
+                    <img style="border:0;" src="images/themes/berkeley.png" width="100%">
+                  </span>
+                </div>
+              </section>
+            </section>
+            <!-- Special thanks to Chitra atthai! -->
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            history: true,
+            slideNumber: 'c/t',
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'plugin/markdown/marked.js'
+            }, {
+                src: 'plugin/markdown/markdown.js'
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>
