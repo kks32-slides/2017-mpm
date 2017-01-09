@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Large deformation modelling in geomechanics</title>
+    <title>Modelling transient dynamics of granular slopes</title>
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/white.css">
@@ -43,12 +43,12 @@
             <section>
               <section>
                 <h2>Modelling transient dynamics of granular slopes</h2>
-                <h3>MPM and DEM</h3>
+                <h3>MPM, DEM and CD</h3>
                 <p>
                   <br/>Krishna Kumar, <a href="mailto:kks32@cam.ac.uk">kks32@cam.ac.uk</a>
                   <br/>University of Cambridge.
 		  <br/>
-                  <br/>Kenichi Soga, Jean-Yves Delenne and Farhang Radjai
+                  <br/>Patrick Mutabaruka, Kenichi Soga, Jean-Yves Delenne and Farhang Radjai
                 </p>
                 <br/>
                 <div style="float: left; width: 100%;">
@@ -127,6 +127,33 @@
 	        </figure>
               </section>
 
+              <!-- Discrete Element Method -->
+              <section>
+                <h2>Discrete Element Method</h2>
+		 <div style="float: left; width: 50%;">
+		  <ul>
+		    <li> Particle level interaction based on Newton's equation 
+		    of motion</li><br />
+		    <li> The contact force is computed as: </li><br />
+		    <div class="block" style="clear: both; width: 85%">
+		    $F_n=\left\{ \begin{matrix} \text{              }0\text{         },\text{ }{{\delta }_{n}}>0  \\
+	   -{{k}_{n}}{{\delta }_{n}}-{{\gamma }_{n}}\frac{d{{\delta }_{n}}}{dt},\text{ }{{\delta }_{n}}<0  \\
+	\end{matrix} \right.$
+		    </div>
+		    <br />
+		    <li> The Newton's equation of motion </li><br />
+		    <div class="block" style="clear: both; width: 45%">
+		    $F_n =m \times a $
+		    </div>
+		  </ul>
+		</div>
+		 <div style="float: right; width: 50%;">
+		  <video  width="90%" controls loop>
+		    <source src="media/tennis_balls.webm" type="video/webm">
+	  	      Your browser does not support the video tag.
+		  </video>
+		</div>
+              </section>
 
               <!-- Material Point Method -->
               <section>
