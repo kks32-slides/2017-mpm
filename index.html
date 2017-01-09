@@ -79,13 +79,6 @@
                 </figure> 
               </section>
 
-              <section>
-                <h2>Aerial landslides</h2>
-	        <img src="images/afghan_landslide.jpg" width="80%">
-                <figcaption>
-                Afghanistan landslide - 2014 (Source: Boston Globe, 2014).
-                </figcaption>	  
-              </section>
 
               <section>
                 <h2>Granular column collapse</h2>
@@ -107,24 +100,20 @@
 	          <img src="images/multiscale.png" width="100%">
 	        </figure>                  
               </section>
-
-              <!-- Multiscale approach -->
-              <section>
-                <h2>Mesh-based vs Mesh-free techniques</h2>
-	        <figure>
-	          <img src="images/continuum_approaches.png" width="100%">
-	        </figure>                  
-              </section>
               
               <!-- Material Point Method -->
               <section>
                 <h2>Material Point Method</h2>
-                <figure>
-	          <img src="images/mpm_equation.png" width="20%">
-	        </figure>         
-                <figure>
-	          <img src="images/mpm_algo.png" width="100%">
-	        </figure>
+                <div style="float: left; width: 30%;">
+	          <figure>
+		    <img src="images/mpm_equation.png" width="100%">
+                  </figure>
+	        </div>
+                <div style="float: left; width: 70%;">
+	          <figure>
+		    <img src="images/mpm_algorithm.png" width="100%">
+		  </figure>
+	        </div>
               </section>
 
               <!-- Discrete Element Method -->
@@ -155,7 +144,30 @@
 		</div>
               </section>
 
-              <!-- Material Point Method -->
+
+              <!-- Simple shear -->
+              <section>
+                <h2>Micro to Macro</h2>
+                <div style="float: left; width: 40%;">
+	          <figure>
+	            <img src="images/simple_shear.png" width="70%">
+                    <figcaption>
+                      Simple shear test
+                    </figcaption>
+	          </figure>                  
+                </div>
+                <div style="float: right; width: 60%;">
+	          <figure>
+	            <img src="images/sxy_vs_syy.png" width="100%">
+                    <figcaption>
+                      Critical state friction angle
+                    </figcaption>
+	          </figure>
+                </div>
+              </section>
+
+
+              <!-- MPM v DEM runout -->
               <section>
                 <h2>MPM v DEM column collapse</h2>
                 <div style="float: left; width: 50%;">
@@ -175,16 +187,7 @@
 	          </figure>
                 </div>
               </section>
-              
 
-              <!-- DEM -->
-              <section>
-                <h2>DEM column collapse</h2>
-                <video  width="80%" controls loop>
-                  <source src="media/a6_dem.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                </video>
-              </section>
 
               <!-- MPM v DEM runout -->
               <section>
@@ -196,8 +199,41 @@
                   </figcaption>
 	        </figure>                  
               </section>
-
               
+
+              <!-- DEM -->
+              <section>
+                <h2>DEM column collapse</h2>
+                <video  width="80%" controls loop>
+                  <source src="media/a6_dem.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+              </section>
+
+
+              <!-- MPM v DEM energy -->
+              <section>
+                <h2>MPM v DEM column collapse</h2>
+                <div style="float: left; width: 50%;">
+	          <figure>
+	            <img src="images/a04_energy.png" width="100%">
+                    <figcaption>
+                      a = 0.4
+                    </figcaption>
+	          </figure>                  
+                </div>
+                <div style="float: right; width: 50%;">
+	          <figure>
+	            <img src="images/a6_energy.png" width="100%">
+                    <figcaption>
+                      a = 6
+                    </figcaption>
+	          </figure>
+                </div>
+              </section>
+            </section>
+
+            <section>              
               <!-- MPM slope -->
               <section>
                 <h2>Granular slope subjected to impact</h2>
@@ -207,6 +243,7 @@
                     Your browser does not support the video tag.
                 </video>
               </section>
+
               
              <!-- MPM v DEM runout -->
               <section>
